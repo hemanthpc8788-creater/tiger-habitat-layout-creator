@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Habitat Layout Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🐯 Tiger Habitat Layout Creator</h1>
+    <p>TIGER HABITAT · HACKATHON PROJECT</p>
+    <p>DESIGN · VALIDATE · IMPROVE</p>
+</header>
+
+<main>
+
+    <section class="intro">
+        <h2>Build Your Habitat Plan</h2>
+        <p>Design a habitat by placing functional zones
+        on the floor plan and checking your layout.</p>
+    </section>
+
+    <section class="mission">
+        <h2>Mission Inputs</h2>
+
+        <label>Crew Size</label>
+        <input type="number" id="crew" value="4" min="1">
+
+        <label>Mission Duration (Days)</label>
+        <input type="number" id="duration" value="30" min="1">
+
+        <label>Habitat Shape</label>
+        <select id="shape">
+            <option value="square">Square</option>
+            <option value="circle">Circular</option>
+            <option value="rectangle">Rectangle</option>
+        </select>
+    </section>
+
+    <section class="zones">
+        <h2>Functional Zones</h2>
+        <div id="zoneList"></div>
+    </section>
+
+    <section class="floor">
+        <h2>Habitat Floor Plan</h2>
+        <p>7 planning zones · 9 available positions</p>
+
+        <div class="grid" id="floorPlan"></div>
+
+        <button onclick="resetLayout()">Reset Layout</button>
+        <button onclick="runChecks()">Run Checks ↗</button>
+        <button onclick="validateLayout()">Validate Layout</button>
+        <button onclick="saveLayout()">Save Layout</button>
+        <button onclick="exportJSON()">Export JSON</button>
+    </section>
+
+    <section class="report">
+        <h2>Validation Report</h2>
+        <div id="result">
+            Not checked yet. Place zones and run checks.
+        </div>
+        <div id="suggestions"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Tiger Titans | Hackathon Project</p>
+    <p>Interactive Habitat Planning Prototype</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
