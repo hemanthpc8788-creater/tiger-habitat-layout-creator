@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #152c45, #087e70);
+}
+
+header h1 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 13px;
+    margin: 5px;
+    color: #b8f5df;
+}
+
+main {
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: #1d2b3e;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 12px;
+    border: 1px solid #35465d;
+}
+
+h2 {
+    color: #45dfb0;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #53657a;
+    background: #101827;
+    color: white;
+}
+
+button {
+    padding: 11px 16px;
+    margin: 8px 4px 0 0;
+    background: #08a887;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #067d68;
+}
+
+#zoneList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.zone {
+    padding: 15px;
+    background: #30435a;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #52677f;
+}
+
+.zone.selected {
+    border: 2px solid #45dfb0;
+    background: #155b50;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.tile {
+    min-height: 100px;
+    background: #30435a;
+    border: 2px dashed #64748b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tile.filled {
+    background: #075e55;
+    border: 2px solid #45dfb0;
+}
+
+.report {
+    background: #172b3a;
+}
+
+#result, #suggestions {
+    margin-top: 15px;
+    padding: 15px;
+    background: #263b4e;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0a111d;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 12px;
+    }
+
+    #zoneList {
+        grid-template-columns: 1fr;
+    }
+
+    .tile {
+        min-height: 85px;
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
